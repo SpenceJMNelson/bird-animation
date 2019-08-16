@@ -1,0 +1,294 @@
+<!doctype="html">
+
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+	<style type="text/css">
+		body {
+			margin: 0;
+		}
+		.audubon-header {
+			background:#EDE4DB;
+			width: 100%;
+			position: relative;
+		}
+
+		.audubon-header img{
+			width:100%;
+			height:auto;
+		}
+
+		.tsm-nav {
+			height:40px;
+			position: absolute;
+			z-index: 100;
+			top:2em;
+			left:2em;
+			right:2em;
+		}
+
+		.tsm-nav img {
+			width:auto;
+			height:100%;
+		}
+
+		.tsm-nav img:nth-child(2) {
+			float:right;
+		}
+
+
+		.bird-illustration {
+			width:50%;
+			position: relative;
+			transform: translateX(-8.8vw) translateY(5.8vw);
+			animation: buildin-bird 1s;
+			
+		}
+
+		.bird-branch {
+			width:50%;
+			position: absolute;
+			top:0;
+			right:0;
+			animation: buildin-l 1s 300ms both;
+
+		}
+
+		.bird-logo{
+			position:absolute;
+			width:60vw;
+			top:22vw;
+			left:20vw;
+			animation: buildin 1s 2s both;
+		}
+
+		.bird-body {
+			width:100%;
+			height:auto;
+			position:relative;
+		}
+
+		.bird-wing-f {
+			width:35%;
+			height:auto;
+			position:absolute;
+			transform-origin: 80% 10%;
+			top:53%;
+			left:17%;
+			animation: bird-flap-a 6s infinite;
+		}
+
+		.bird-wing-b {
+			width:35%;
+			height:auto;
+			position:absolute;
+			transform-origin: 80% 0%;
+			top:54%;
+			left:17%;
+			animation: bird-flap-b 6s infinite;
+		}
+
+		.bird-head {
+			width:24%;
+			height:auto;
+			position:absolute;
+			top:49%;
+			left:49%;
+			animation: bird-nod 4s infinite;
+			transform-origin: 5% 0%;
+		}
+
+		.bird-eye {
+			width:13%;
+			height:auto;
+			position:absolute;
+			top: 23%;
+			left: 49%;
+			opacity:1;
+			animation: bird-blink 6s infinite;
+			border-radius: 100%;
+			overflow: hidden;
+		}
+
+		.bird-subtitle {
+			width:30%;
+			animation: buildin-l 4s 2200ms both;
+			position: absolute;
+			right:20%;
+			bottom: 10%;
+			font-family: 'Montserrat', sans-serif;
+
+		}
+
+		.bird-subtitle h2 {
+			font-size: 10px;
+			font-weight: bold;
+			border-left:solid black 2px;
+			padding-left:1em;
+			text-transform: uppercase;
+			letter-spacing: .2em;
+			opacity:.5;
+		}
+
+		@keyframes bird-blink{
+			0%{
+				opacity:0;
+			}
+			49%{
+				opacity:0;
+			}
+			50%{
+				opacity:1;
+			}
+			51%{
+				opacity:0;
+			}
+			100%{
+				opacity:0;
+			}
+		}
+
+		@keyframes buildin{
+			from{
+				transform:translateY(10%);
+				opacity:0;
+			}
+
+			to{
+				transform:translateY(0%);
+				opacity:1;
+			}
+			
+		}
+
+
+		@keyframes buildin-l{
+			from{
+				transform:translateX(10%);
+				opacity:0;
+			}
+
+			to{
+				transform:translateX(0%);
+				opacity:1;
+			}
+			
+		}
+
+		@keyframes buildin-bird{
+			from{
+				transform:translateX(-10.8vw) translateY(5.8vw);
+				opacity:0;
+			}
+
+			to{
+				transform:translateX(-8.8vw) translateY(5.8vw);
+				opacity:1;
+			}
+			
+		}
+
+		@keyframes bird-flap-a{
+			0%{
+				transform:rotate(2deg);
+			}
+			13%{
+				transform:rotate(1deg);
+			}
+			42%{
+				transform:rotate(-1deg);
+			}
+			65%{
+				transform:rotate(3deg);
+			}
+			71%{
+				transform:rotate(1deg);
+			}
+			87%{
+				transform:rotate(-3deg);
+			}
+			100%{
+				transform:rotate(2deg);
+			}
+		}
+
+		@keyframes bird-nod{
+			0%{
+				transform:rotate(1deg);
+			}
+			13%{
+				transform:rotate(-1deg);
+			}
+			42%{
+				transform:rotate(2deg);
+			}
+			65%{
+				transform:rotate(3deg);
+			}
+			71%{
+				transform:rotate(2deg);
+			}
+			87%{
+				transform:rotate(0deg);
+			}
+			100%{
+				transform:rotate(1deg);
+			}
+		}
+
+		@keyframes bird-flap-b{
+			0%{
+				transform:rotate(-2deg);
+			}
+			12%{
+				transform:rotate(1deg);
+			}
+
+			22%{
+				transform:rotate(2deg);
+			}
+
+			51%{
+				transform:rotate(0deg);
+			}
+
+			68%{
+				transform:rotate(3deg);
+			}
+			77%{
+				transform:rotate(-3deg);
+			}
+			90%{
+				transform:rotate(1deg);
+			}
+			100%{
+				transform:rotate(-2deg);
+			}
+		}
+
+
+	</style>
+</head>
+
+<body>
+	<div class="audubon-header">
+		<div class="tsm-nav"><img src="threespot_logo.png"><img src="menu-icon.png"></div>
+		<div class="bird-logo"><img src="audubon-logo.png"></div>
+
+		<div class="bird-branch"><img src="aud-rbanch.png"></div>
+		<div class="bird-subtitle">
+			<h2>Using data to improve a web site and drive future enhancements.</h2>
+		</div>
+		<div class="bird-illustration">
+			
+			<div class="bird-wing-b"><img src="aud-wingb.png"></div>
+			<div class="bird-body"><img src="aud-tree.png"></div>
+			
+			<div class="bird-head">
+			<img src="aud-head.png">	
+				<div class="bird-eye"><img src="aud-eyeful.png"></div>	
+			</div>
+			<div class="bird-wing-f"><img src="aud-wingf.png"></div>
+			
+		</div>
+	</div>
+</body>
